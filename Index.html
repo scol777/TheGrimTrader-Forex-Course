@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Grim Trader Forex Course</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f4c81, #6a0dad);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      padding: 60px 50px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .cta-btn {
+      padding: 14px 35px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #4facfe, #9b5cff);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-box {
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    /* COURSES */
+    .courses {
+      padding: 40px 50px 80px;
+    }
+
+    .courses h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .course-card {
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .course-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .course-card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      padding: 12px 28px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #4facfe, #9b5cff);
+      color: white;
+      cursor: pointer;
+    }
+
+    /* SOCIAL */
+    .social {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .telegram-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 35px;
+      border-radius: 30px;
+      background: #0088cc;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Forex Blueprint</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#social">Telegram</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Master Forex Trading</h2>
+    <p>
+      Learn professional trading strategies, risk management,
+      and funded account preparation. Access is granted via Telegram.
+    </p>
+    <button class="cta-btn" onclick="openTelegram()">Join Telegram</button>
+  </div>
+
+  <div class="hero-box">
+    <h3>Why Learn With Us?</h3>
+    <p>✔ Smart Money Concepts</p>
+    <p>✔ Funded Account Strategy</p>
+    <p>✔ Lifetime Telegram Access</p>
+  </div>
+</section>
+
+<section class="courses" id="courses">
+  <h2>Forex Courses</h2>
+
+  <div class="course-grid">
+    <div class="course-card">
+      <h3>Beginner Forex Course</h3>
+      <p>Market basics, entries, risk management.</p>
+      <div class="price">$49</div>
+      <button class="buy-btn" onclick="openTelegram()">Buy via Telegram</button>
+    </div>
+
+    <div class="course-card">
+      <h3>Advanced SMC Course</h3>
+      <p>Liquidity, order blocks, entries & exits.</p>
+      <div class="price">$99</div>
+      <button class="buy-btn" onclick="openTelegram()">Buy via Telegram</button>
+    </div>
+
+    <div class="course-card">
+      <h3>Funded Account Blueprint</h3>
+      <p>FTMO, risk rules, consistency strategy.</p>
+      <div class="price">$149</div>
+      <button class="buy-btn" onclick="openTelegram()">Buy via Telegram</button>
+    </div>
+  </div>
+</section>
+
+<section class="social" id="social">
+  <h2>Purchase & Access</h2>
+  <p>All course purchases and access are handled via Telegram.</p>
+  <a href="https://t.me/YOUR_TELEGRAM_USERNAME" class="telegram-btn" target="_blank">
+    Open Telegram
+  </a>
+</section>
+
+<footer>
+  © 2025 Forex Blueprint Academy. All Rights Reserved.
+</footer>
+
+<script>
+  function openTelegram() {
+    window.open("https://t.me/YOUR_TELEGRAM_USERNAME", "_blank");
+  }
+</script>
+
+</body>
+</html>
